@@ -1,0 +1,476 @@
+/* style.css - Styling Umum dan Layout */
+
+/* Reset dan Styling Dasar */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; 
+}
+
+/* Layout Utama */
+.main-layout {
+    display: flex; 
+    min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px; 
+    background-color: #ffffff; 
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05); 
+}
+
+.logo {
+    text-align: center;
+    padding: 10px 0 30px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.user-info {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+.user-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #2196f3; 
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+}
+
+.user-name {
+    font-weight: bold;
+    margin: 0;
+}
+
+.user-id {
+    font-size: 0.8em;
+    color: #777;
+}
+
+/* Navigasi Sidebar */
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #555;
+    transition: background-color 0.3s;
+}
+
+.nav-menu li a:hover,
+.nav-menu li.active a {
+    background-color: #e3f2fd; 
+    color: #2196f3;
+    border-left: 3px solid #2196f3; 
+}
+
+/* Konten Utama */
+.content-area {
+    flex-grow: 1;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 0; 
+}
+
+/* Header di Konten Utama */
+.content-header {
+    background-color: #2196f3; 
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-title {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.page-subtitle {
+    font-size: 0.8em;
+    opacity: 0.8;
+}
+
+/* Body Konten */
+.content-body {
+    padding: 20px;
+    background-color: #f4f4f4; 
+    margin: 20px;
+    flex-grow: 1; 
+    min-height: auto;
+    border-radius: 8px; 
+    overflow-y: auto;
+}
+
+/* --------------------------------------------------- */
+/* Styling Khusus untuk Tabel Presensi */
+/* --------------------------------------------------- */
+
+.presensi-container {
+    background-color: #ffffff; /* Latar belakang putih untuk kotak konten utama */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sedikit bayangan */
+    margin-top: 0px; 
+}
+
+/* Gaya Header Judul Halaman */
+.table-header {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    display: flex;
+    flex-direction: column; 
+    background-color: transparent; 
+    padding: 0; 
+}
+
+.table-header span:first-child {
+    font-size: 1.5em; 
+    font-weight: bold;
+    color: #333;
+}
+
+.table-header span:last-child {
+    font-size: 0.9em; 
+    font-weight: normal;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Gaya Tabel Data */
+.data-table {
+    width: 100%;
+    border-collapse: collapse; 
+    font-size: 0.95em;
+}
+
+/* Gaya Header Tabel */
+.data-table thead tr {
+    background-color: #e3f2fd; /* Warna biru muda untuk header tabel (sesuai gambar) */
+    color: #333;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table th {
+    font-weight: 600; 
+    text-transform: none; 
+    font-size: 1em; 
+}
+
+/* Kolom AKSI dibuat lebih kecil dan ditengahkan */
+.aksi-kolom {
+    width: 120px; 
+    text-align: center !important; 
+}
+
+/* Kolom KETERANGAN */
+.data-table td:last-child {
+    text-align: center;
+    font-weight: 500;
+}
+
+/* ---------------------------------------------------- */
+/* STYLING TOMBOL PRESENSI (HADIR/BATAL) */
+/* ---------------------------------------------------- */
+
+.presensi-btn {
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    min-width: 80px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+/* Gaya untuk status BELUM HADIR (Tombol biru 'HADIR') */
+.presensi-btn.belum-hadir {
+    background-color: #42a5f5; /* Biru cerah (Warna Aksi) */
+    color: white;
+}
+
+.presensi-btn.belum-hadir:hover {
+    background-color: #1e88e5; 
+}
+
+/* Gaya untuk status HADIR (Tombol hijau 'HADIR' / atau 'BATAL' jika diubah dengan JS) */
+.presensi-btn.hadir {
+    background-color: #4CAF50; /* HIJAU untuk status Hadir */
+    color: white;
+    cursor: pointer;
+    box-shadow: none; 
+    opacity: 1;
+}
+
+.presensi-btn.hadir:hover {
+    background-color: #388E3C; /* Hijau lebih gelap */
+}
+
+/* --- Gaya Sel Keterangan (Status) --- */
+
+/* Status default/Awal */
+.status-keterangan {
+    color: #333; 
+}
+
+/* Status Hadir (Hijau) */
+.status-keterangan.status-hadir {
+    color: #2e7d32; /* Hijau Tua */
+    font-weight: bold;
+}
+
+/* Status Belum Hadir (Abu-abu gelap) */
+.status-keterangan.status-belum-hadir {
+    color: #777; /* Abu-abu standar */
+    font-weight: normal;
+}
+
+/* --- Gaya Tombol Simpan Umum --- */
+.btn-primary {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #42a5f5; /* Biru Primer */
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background-color: #1e88e5; /* Biru lebih gelap saat hover */
+}
+
+/* Gaya saat tombol dinonaktifkan (default) */
+.btn-primary:disabled {
+    background-color: #bbdefb; /* Warna biru sangat muda/abu-abu */
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* Penempatan Tombol */
+.form-actions {
+    display: flex;
+    justify-content: flex-end; /* Memindahkan tombol ke kanan */
+    margin-top: 20px;
+}
+
+/* --------------------------------------------------- */
+/* STYLING KHUSUS UNTUK FORM PRESENSI KARYAWAN (VERSI CARD) */
+/* --------------------------------------------------- */
+
+/* Judul Halaman Form (PRESENSI KARYAWAN) */
+.page-title-form { 
+    font-size: 1.8em; 
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: left; 
+    /* Batasi lebar dan PUSATKAN h1 agar sejajar dengan card di bawahnya */
+    max-width: 600px; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+/* Card yang membungkus form */
+.presensi-form-card {
+    background-color: #fff; 
+    padding: 30px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    max-width: 600px; 
+    /* PUSATKAN CARD DI DALAM content-body */
+    margin: 0 auto 30px auto; 
+}
+
+/* Layout Grid untuk Form (2 kolom) */
+.form-grid-layout {
+    display: grid !important;
+    /* Kolom pertama (Label) selebar konten (auto), Kolom kedua (Input) ambil sisa ruang (1fr) */
+    grid-template-columns: auto 1fr !important; 
+    gap: 20px 15px; /* Jarak vertikal dan horizontal */
+    align-items: center; 
+}
+
+/* Gaya Label Grid */
+.form-label {
+    font-weight: 500;
+    color: #555;
+    /* RATA KANAN agar sejajar dengan input */
+    text-align: right; 
+    padding-right: 15px;
+    margin: 0 !important;
+}
+
+/* Gaya Input Grid */
+.form-input {
+    padding: 10px 15px;
+    border: none; 
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box; 
+    font-size: 16px;
+    color: #495057;
+    background-color: #e9ecef; /* Background abu-abu muda */
+    height: 40px; 
+}
+
+/* Gaya Input Readonly (Nama) */
+.readonly-input {
+    color: #777; 
+    cursor: default;
+}
+
+/* Gaya Tombol Hadir */
+.btn-hadir {
+    background-color: #007bff; /* Biru Primer */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100px; 
+    float: none; 
+}
+
+/* Wrapper untuk tombol, agar tombol berada di kolom input */
+.form-action-item {
+    grid-column: 2 / 3 !important; /* Memastikan div ini berada di kolom kedua */
+    /* RATA KANAN sesuai desain awal Anda */
+    text-align: right; 
+    margin-top: 5px;
+}
+/* --------------------------------------------------- */
+/* MEDIA QUERIES UNTUK TAMPILAN RESPONSIVE */
+/* --------------------------------------------------- */
+
+/* Aturan untuk Layar Kecil (Maksimal 768px - Ideal untuk Tablet dan Handphone) */
+@media (max-width: 768px) {
+
+    /* 1. Tata Letak Utama */
+    .main-layout {
+        flex-direction: column; 
+    }
+
+    /* 2. Sidebar (Navigasi) */
+    .sidebar {
+        width: 100%; 
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
+        order: -1; 
+    }
+
+    .user-info {
+        display: none; 
+    }
+    
+    .logo {
+        padding: 10px 0;
+    }
+
+    /* Mengubah menu navigasi dari vertikal menjadi horizontal untuk HP */
+    .nav-menu ul {
+        display: flex; 
+        justify-content: space-around; 
+        border-top: 1px solid #eee;
+        padding-top: 10px;
+    }
+
+    .nav-menu li {
+        width: auto; 
+        text-align: center;
+    }
+
+    .nav-menu li a {
+        padding: 8px 5px;
+        border-left: none; 
+    }
+    
+    /* 3. Konten Utama */
+    .content-area {
+        width: 100%; 
+    }
+    
+    .content-body {
+        margin: 10px; 
+        padding: 15px;
+        overflow-x: auto; /* Menambahkan scroll horizontal untuk tabel */
+    }
+
+    /* 4. Perbaikan Tampilan Header Konten */
+    .content-header {
+        flex-direction: column; 
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .page-subtitle {
+        margin-top: 5px;
+    }
+
+    /* Menyesuaikan lebar minimum tabel agar tidak terpotong (penting!) */
+    .presensi-mahasiswa-table {
+        min-width: 600px; 
+    }
+
+    /* Mengubah ukuran tombol di mobile agar tidak terlalu besar */
+    .presensi-btn {
+        padding: 6px 10px;
+        min-width: 70px;
+        font-size: 0.8em;
+    }
+
+    /* 5. Responsif Form Presensi */
+    .presensi-form-card {
+        padding: 20px;
+        margin: 10px auto; 
+    }
+
+    /* Di layar kecil, ubah tata letak form menjadi satu kolom */
+    .form-grid-layout {
+        grid-template-columns: 1fr; /* Hanya satu kolom */
+        gap: 15px;
+    }
+
+    /* Label tidak perlu rata kanan lagi */
+    .form-label {
+        text-align: left;
+        padding-right: 0;
+    }
+    
+    /* Tombol Hadir harus mengisi lebar penuh di kolomnya dan rata kanan */
+    .form-action-item {
+        grid-column: 1 / -1; /* Mengambil lebar penuh */
+        text-align: right;
+    }
+
+    .btn-hadir {
+        float: none; /* Hapus float */
+        width: 100px; /* Pertahankan lebar yang sama */
+        /* Bisa juga diubah ke width: 100% jika diinginkan tombol lebar penuh */
+    }
+}

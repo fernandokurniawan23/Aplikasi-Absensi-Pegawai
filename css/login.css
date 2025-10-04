@@ -1,0 +1,93 @@
+/* Styling Khusus Halaman Login */
+
+.login-body {
+    background-color: #e0f7fa; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-box {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.profile-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #2196f3; 
+    border-radius: 50%;
+    margin: 0 auto 20px auto; 
+}
+
+.greeting {
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+.remember-me {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 10px;
+    background-color: #2196f3; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.btn-login:hover {
+    background-color: #1e88e5; 
+}
+
+.forgot-password, .new-account {
+    font-size: 0.8em;
+    margin-top: 10px;
+}
+
+.new-account a {
+    color: #2196f3;
+    text-decoration: none;
+}
