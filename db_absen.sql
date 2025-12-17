@@ -37,7 +37,7 @@ CREATE TABLE `absensi` (
   `foto_pulang` varchar(255) DEFAULT NULL,
   `status` varchar(20) NOT NULL,
   `status_lembur` enum('Ya','Tidak') NOT NULL DEFAULT 'Tidak'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `absensi`
